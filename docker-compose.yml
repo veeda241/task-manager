@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_secure_dev
+      MYSQL_DATABASE: task_manager_db
+      MYSQL_USER: task_user
+      MYSQL_PASSWORD: task_password_secure_dev
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: mysql+mysqlconnector://task_user:task_password_secure_dev@db:3306/task_manager_db
+      JWT_SECRET_KEY: A_SECURE_SECRET_KEY_PLACEHOLDER_IN_ENV
+      ACCESS_TOKEN_EXPIRE_MINUTES: 30
+    restart: always
+volumes:
+  db_data:

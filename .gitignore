@@ -1,0 +1,58 @@
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+# Environment files
+.env
+.env.local
+.env.*.local
+# Flutter
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.dart_tool/
+/build/
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+# For FastAPI/Uvicorn specifically
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+# Docker
+# Don't ignore the Dockerfile or docker-compose.yml as they are part of the project structure
+# but generated build contexts or images might be ignored.
+# For now, no specific Docker output to ignore, as images are built and pushed, not stored locally.
+# Logs
+*.log
+log/
+logs/
+# Dependencies (if not managed by specific package managers)
+# For example, if a `vendor/` directory were used.
+# But for Python, .venv/ covers this. For Dart, .dart_tool/ covers it.
+# Secrets and credentials
+# These should ideally be outside the repo or handled by secrets management,
+# but if they appear, they should be ignored.
+*.key
+*.pem
+*.p12
+*.crt
+# Test reports
+coverage/
+.nyc_output/
+junit.xml
+# Operating System Files
+.vscode/
+.DS_Store
+Thumbs.db
+# Other temporary files
+*~
+*.bak
+*.swp
+*.swo

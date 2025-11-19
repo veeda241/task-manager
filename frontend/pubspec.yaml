@@ -1,0 +1,19 @@
+name: task_manager_veeda
+description: A comprehensive task management application built with Flutter.
+publish_to: 'none' # Remove this line if you intend to publish this package.
+version: 1.0.0+1
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.1.0 # Latest stable version at time of writing
+  provider: ^6.0.5 # Latest stable version at time of writing
+  shared_preferences: ^2.2.2 # Latest stable version at time of writing
+  flutter_svg: ^2.0.9 # Latest stable version at time of writing
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0 # Recommended for linting rules
+flutter:
+  uses-material-design: true
